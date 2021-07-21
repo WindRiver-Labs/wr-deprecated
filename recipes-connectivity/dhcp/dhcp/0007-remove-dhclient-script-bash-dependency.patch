@@ -1,0 +1,29 @@
+From 270ba251ebf72fd1678d5480b2e153d58a7f0d85 Mon Sep 17 00:00:00 2001
+From: Andre McCurdy <armccurdy@gmail.com>
+Date: Tue, 15 Aug 2017 15:49:31 +0800
+Subject: [PATCH] remove dhclient-script bash dependency
+
+Upstream-Status: Inappropriate [OE specific]
+
+Signed-off-by: Andre McCurdy <armccurdy@gmail.com>
+
+Rebase to 4.3.6
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+Signed-off-by: Yi Zhao <yi.zhao@windriver.com>
+---
+ client/scripts/linux | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/client/scripts/linux b/client/scripts/linux
+index 516c986..e9ea379 100755
+--- a/client/scripts/linux
++++ b/client/scripts/linux
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ # dhclient-script for Linux. Dan Halbert, March, 1997.
+ # Updated for Linux 2.[12] by Brian J. Murrell, January 1999.
+ # No guarantees about this. I'm a novice at the details of Linux
+-- 
+2.17.1
+

@@ -1,0 +1,30 @@
+From 70f1084b3ef8c0b9616e4f5c9a8044e9b3dd3f45 Mon Sep 17 00:00:00 2001
+From: Yi Zhao <yi.zhao@windriver.com>
+Date: Mon, 19 Jul 2021 16:01:09 +0800
+Subject: [PATCH] Makefile.am: disable dhcp-relay build
+
+Drop dhcp-relay build as it is provided by dhcp-relay recipe.
+
+Upstream-Status: Inappropriate [embedded specific]
+
+Signed-off-by: Yi Zhao <yi.zhao@windriver.com>
+---
+ Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index ed692a5..76e46a5 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -38,7 +38,7 @@ endif
+ 
+ # Use an autoconf substitution vs an automake conditional here
+ # to fool automake when the bind directory does not exist.
+-SUBDIRS = @BINDSUBDIR@ includes tests common omapip client dhcpctl relay server
++SUBDIRS = @BINDSUBDIR@ includes tests common omapip client dhcpctl server
+ 
+ DIST_SUBDIRS = $(SUBDIRS) keama
+ 
+-- 
+2.17.1
+
